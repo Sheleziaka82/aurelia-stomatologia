@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Aurelia">
+  <rect width="32" height="32" rx="7" fill="#2A4A40"/>
+  <path fill="#F3EFE8" fill-rule="evenodd" d="M16 5.4 25.6 22.4h-3.95l-1.88-4.28H12.23L10.35 22.4H6.4L16 5.4Zm0 5.05-2.42 5.5h4.84L16 10.45Z"/>
+  <path d="M8.8 25.15c2.35 2.35 5.15 3.5 7.2 3.5s4.85-1.15 7.2-3.5" fill="none" stroke="#F3EFE8" stroke-width="1.85" stroke-linecap="round"/>
+</svg>
