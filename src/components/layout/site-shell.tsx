@@ -7,20 +7,22 @@ import { SiteHeader } from "./site-header";
 export function SiteShell({ children }: { children: ReactNode }) {
   const t = useCopy();
   return (
-    <div className="min-h-dvh bg-bg text-fg">
+    <div className="flex min-h-svh flex-col bg-bg text-fg">
       <a
-        href="#content"
-        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-primary focus:px-4 focus:py-2 focus:text-primary-fg"
+        href="#tresc"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-primary focus:px-3 focus:py-2 focus:text-primary-fg"
       >
         {t.nav.skip}
       </a>
       <SiteHeader />
-      <main id="content">{children}</main>
+      <main id="tresc" className="flex-1">
+        {children}
+      </main>
       <SiteFooter />
       <Toaster
-        position="top-center"
+        position="bottom-right"
         toastOptions={{
-          className: "aurelia-toast font-sans",
+          className: "clinic-toast font-sans",
         }}
       />
     </div>

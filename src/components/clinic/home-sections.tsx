@@ -17,10 +17,10 @@ export function HomeHero() {
     <section className="overflow-hidden">
       <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-12 sm:px-8 lg:grid-cols-12 lg:gap-12 lg:py-16">
         <div className="stagger-in lg:col-span-6">
-          <p className="text-xs font-semibold uppercase tracking-label text-muted">
+          <p className="text-xs font-semibold uppercase tracking-label text-leaf">
             {t.hero.eyebrow}
           </p>
-          <h1 className="mt-4 font-display text-4xl font-medium tracking-tight text-fg sm:text-5xl lg:text-6xl">
+          <h1 className="mt-4 font-display text-4xl font-semibold tracking-tight text-fg sm:text-5xl lg:text-6xl">
             {t.hero.title}
           </h1>
           <p className="mt-5 max-w-md text-base leading-relaxed text-muted sm:text-lg">
@@ -46,7 +46,7 @@ export function HomeHero() {
           <div className="overflow-hidden rounded-2xl bg-bg-warm p-2">
             <img
               src="/images/hero.jpg"
-              alt=""
+              alt="MiDental Stomatologia, Tukanów 12"
               className="clinic-photo aspect-photo h-full w-full rounded-xl object-cover"
             />
           </div>
@@ -63,7 +63,7 @@ export function HomeStats() {
       <dl className="grid grid-cols-2 gap-8 md:grid-cols-4">
         {t.stats.map((stat) => (
           <div key={stat.label}>
-            <dt className="font-display text-3xl font-medium tracking-tight text-primary sm:text-4xl">
+            <dt className="font-display text-3xl font-semibold tracking-tight text-primary sm:text-4xl">
               {stat.value}
             </dt>
             <dd className="mt-1 text-sm text-muted">{stat.label}</dd>
@@ -88,13 +88,13 @@ export function HomeAbout() {
         </div>
         <div>
           <Eyebrow>{t.about.eyebrow}</Eyebrow>
-          <h2 className="mt-3 font-display text-3xl font-medium tracking-tight sm:text-4xl">
+          <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight sm:text-4xl">
             {t.about.title}
           </h2>
           <p className="mt-5 leading-relaxed text-muted">{t.about.body}</p>
           <ul className="mt-8 space-y-5">
             {t.about.points.map((point) => (
-              <li key={point.title} className="border-l-2 border-primary pl-4">
+              <li key={point.title} className="border-l-2 border-leaf pl-4">
                 <p className="font-medium">{point.title}</p>
                 <p className="mt-1 text-sm text-muted">{point.text}</p>
               </li>
@@ -114,7 +114,7 @@ export function HomeServices() {
       <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
         <div className="max-w-xl">
           <Eyebrow>{t.services.eyebrow}</Eyebrow>
-          <h2 className="mt-3 font-display text-3xl font-medium tracking-tight sm:text-4xl">
+          <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight sm:text-4xl">
             {t.services.title}
           </h2>
           <p className="mt-4 text-muted">{t.services.lead}</p>
@@ -136,7 +136,7 @@ export function HomeServices() {
               hash={id}
               className="group rounded-xl bg-bg p-5 shadow-[var(--shadow-border)] transition-[box-shadow,transform] duration-200 hover:shadow-[var(--shadow-border-hover)]"
             >
-              <h3 className="font-display text-xl font-medium">{item.name}</h3>
+              <h3 className="font-display text-xl font-semibold">{item.name}</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted">{item.short}</p>
               <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary">
                 <ArrowRight className="size-4 transition-transform duration-150 group-hover:translate-x-0.5" />
@@ -151,40 +151,36 @@ export function HomeServices() {
 
 export function HomeTeam() {
   const t = useCopy();
+  const doc = doctors[0];
+  const person = t.team.people[doc.id];
   return (
     <Section>
-      <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
-        <div className="max-w-xl">
+      <div className="grid items-center gap-12 lg:grid-cols-12">
+        <div className="lg:col-span-5">
+          <div className="overflow-hidden rounded-2xl bg-bg-warm p-2">
+            <img
+              src={doc.image}
+              alt={person.name}
+              className="clinic-photo aspect-portrait w-full rounded-xl object-cover object-[50%_20%]"
+            />
+          </div>
+        </div>
+        <div className="lg:col-span-7">
           <Eyebrow>{t.team.eyebrow}</Eyebrow>
-          <h2 className="mt-3 font-display text-3xl font-medium tracking-tight sm:text-4xl">
+          <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight sm:text-4xl">
             {t.team.title}
           </h2>
-          <p className="mt-4 text-muted">{t.team.lead}</p>
+          <p className="mt-4 max-w-xl text-muted">{t.team.lead}</p>
+          <h3 className="mt-8 font-display text-2xl font-semibold">{person.name}</h3>
+          <p className="mt-1 text-primary">{person.role}</p>
+          <p className="mt-4 max-w-xl leading-relaxed text-muted">{person.bio}</p>
+          <Button asChild className="mt-8">
+            <Link to="/zespol">
+              {t.team.all}
+              <ArrowRight />
+            </Link>
+          </Button>
         </div>
-        <Button asChild variant="outline">
-          <Link to="/zespol">
-            {t.team.all}
-            <ArrowRight />
-          </Link>
-        </Button>
-      </div>
-      <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-        {doctors.map((doc) => {
-          const person = t.team.people[doc.id];
-          return (
-            <article key={doc.id} className="group">
-              <div className="overflow-hidden rounded-xl bg-bg-warm p-1.5">
-                <img
-                  src={doc.image}
-                  alt={person.name}
-                  className="clinic-photo aspect-portrait w-full rounded-lg object-cover object-top grayscale transition-[filter] duration-300 group-hover:grayscale-0"
-                />
-              </div>
-              <h3 className="mt-4 font-display text-lg font-medium">{person.name}</h3>
-              <p className="mt-1 text-sm text-muted">{person.role}</p>
-            </article>
-          );
-        })}
       </div>
     </Section>
   );
@@ -197,7 +193,7 @@ export function HomeReviews() {
       <Eyebrow>
         <span className="text-primary-fg/70">{t.reviews.eyebrow}</span>
       </Eyebrow>
-      <h2 className="mt-3 max-w-2xl font-display text-3xl font-medium tracking-tight sm:text-4xl">
+      <h2 className="mt-3 max-w-2xl font-display text-3xl font-semibold tracking-tight sm:text-4xl">
         {t.reviews.title}
       </h2>
       <div className="mt-12 grid gap-6 md:grid-cols-3">
@@ -225,7 +221,7 @@ export function HomeFaq() {
       <div className="grid gap-10 lg:grid-cols-12">
         <div className="lg:col-span-4">
           <Eyebrow>{t.faq.eyebrow}</Eyebrow>
-          <h2 className="mt-3 font-display text-3xl font-medium tracking-tight sm:text-4xl">
+          <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight sm:text-4xl">
             {t.faq.title}
           </h2>
         </div>
@@ -250,7 +246,7 @@ export function VisitCta() {
     <Section className="bg-bg-warm">
       <div className="grid items-center gap-10 lg:grid-cols-2">
         <div>
-          <h2 className="font-display text-3xl font-medium tracking-tight sm:text-4xl">
+          <h2 className="font-display text-3xl font-semibold tracking-tight sm:text-4xl">
             {t.cta.title}
           </h2>
           <p className="mt-4 max-w-md text-muted">{t.cta.body}</p>

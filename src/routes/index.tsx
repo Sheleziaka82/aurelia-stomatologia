@@ -30,10 +30,11 @@ const jsonLd = {
   image: "/images/hero.jpg",
   telephone: clinic.phone,
   email: clinic.email,
+  url: clinic.mapLink,
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Mokotowska 48",
-    addressLocality: "Warszawa",
+    streetAddress: "Tukanów 12 lok. U3",
+    addressLocality: "Stara Iwiczna",
     postalCode: clinic.postal,
     addressCountry: "PL",
   },
@@ -48,7 +49,7 @@ const jsonLd = {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: "Saturday",
       opens: "09:00",
-      closes: "14:00",
+      closes: "15:00",
     },
   ],
 };

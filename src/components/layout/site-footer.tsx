@@ -10,7 +10,9 @@ export function SiteFooter() {
     <footer className="border-t border-border bg-primary text-primary-fg">
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 sm:px-8 md:grid-cols-3">
         <div className="space-y-4">
-          <Logo className="text-primary-fg [&_svg]:text-primary-fg" />
+          <div className="inline-flex rounded-lg bg-surface px-3 py-2">
+            <Logo />
+          </div>
           <p className="max-w-xs text-sm leading-relaxed text-primary-fg/75">{t.footer.blurb}</p>
         </div>
         <div className="space-y-2 text-sm">
@@ -26,6 +28,16 @@ export function SiteFooter() {
           <p>
             <a className="hover:underline" href={`mailto:${clinic.email}`}>
               {clinic.email}
+            </a>
+          </p>
+          <p>
+            <a
+              className="hover:underline"
+              href={clinic.whatsappHref}
+              target="_blank"
+              rel="noreferrer"
+            >
+              {clinic.whatsapp}
             </a>
           </p>
         </div>

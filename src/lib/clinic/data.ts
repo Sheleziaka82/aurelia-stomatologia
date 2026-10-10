@@ -2,71 +2,53 @@ export const langs = ["pl", "en", "ru"] as const;
 export type Lang = (typeof langs)[number];
 
 export const clinic = {
-  name: "Aurelia",
-  fullName: "Aurelia Stomatologia",
-  street: "ul. Mokotowska 48",
-  postal: "00-543",
-  city: "Warszawa",
-  phone: "+48 22 416 08 20",
-  phoneHref: "tel:+48224160820",
-  email: "recepcja@aurelia.waw.pl",
-  instagram: "@aurelia.stomatologia",
+  name: "MiDental",
+  fullName: "MiDental Stomatologia",
+  street: "ul. Tukanów 12 lok. U3",
+  postal: "05-500",
+  city: "Stara Iwiczna",
+  phone: "+48 578 302 502",
+  phoneHref: "tel:+48578302502",
+  email: "midentalstomatologia@gmail.com",
+  whatsapp: "WhatsApp",
+  whatsappHref: "https://wa.me/48578302502",
   mapEmbed:
-    "https://www.openstreetmap.org/export/embed.html?bbox=21.012%2C52.222%2C21.032%2C52.233&layer=mapnik&marker=52.2278%2C21.022",
-  mapLink: "https://www.openstreetmap.org/?mlat=52.2278&mlon=21.022#map=17/52.2278/21.022",
+    "https://www.openstreetmap.org/export/embed.html?bbox=21.006%2C52.078%2C21.016%2C52.084&layer=mapnik&marker=52.080883%2C21.010779",
+  mapLink: "https://maps.app.goo.gl/vhe7yemzuvmgjt6ba",
 };
 
 export const serviceIds = [
   "consult",
   "hygiene",
   "conservative",
+  "endo",
   "aesthetic",
   "implants",
-  "ortho",
   "prosthetics",
   "surgery",
   "pediatric",
 ] as const;
 export type ServiceId = (typeof serviceIds)[number];
 
-export const doctorIds = ["anna", "marek", "zofia", "piotr"] as const;
+export const doctorIds = ["lekarz"] as const;
 export type DoctorId = (typeof doctorIds)[number];
 
 export const doctors = [
   {
-    id: "anna" as const,
-    image: "/images/doctor-anna.jpg",
-    years: 16,
-    langs: ["PL", "EN"] as const,
-  },
-  {
-    id: "marek" as const,
-    image: "/images/doctor-marek.jpg",
-    years: 22,
-    langs: ["PL", "EN"] as const,
-  },
-  {
-    id: "zofia" as const,
-    image: "/images/doctor-zofia.jpg",
-    years: 11,
-    langs: ["PL", "EN", "RU"] as const,
-  },
-  {
-    id: "piotr" as const,
-    image: "/images/doctor-piotr.jpg",
-    years: 14,
-    langs: ["PL", "EN"] as const,
+    id: "lekarz" as const,
+    image: "/images/doctor.jpg",
+    langs: ["PL"] as const,
   },
 ];
 
 export const serviceImages: Record<ServiceId, string> = {
   consult: "/images/lounge.jpg",
-  hygiene: "/images/instruments.jpg",
+  hygiene: "/images/prevent.jpg",
   conservative: "/images/room.jpg",
-  aesthetic: "/images/basin.jpg",
+  endo: "/images/room.jpg",
+  aesthetic: "/images/smile.jpg",
   implants: "/images/room.jpg",
-  ortho: "/images/lounge.jpg",
-  prosthetics: "/images/instruments.jpg",
+  prosthetics: "/images/smile.jpg",
   surgery: "/images/room.jpg",
   pediatric: "/images/lounge.jpg",
 };
@@ -109,6 +91,8 @@ export const saturdayHours = [
   "12:30",
   "13:00",
   "13:30",
+  "14:00",
+  "14:30",
 ];
 
 export function slotsForDate(isoDate: string): string[] {
@@ -139,5 +123,5 @@ export type Appointment = {
   createdAt: string;
 };
 
-export const APPOINTMENTS_KEY = "aurelia-appointments";
-export const LANG_KEY = "aurelia-lang";
+export const APPOINTMENTS_KEY = "midental-appointments";
+export const LANG_KEY = "midental-lang";

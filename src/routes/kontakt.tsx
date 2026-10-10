@@ -21,7 +21,7 @@ function ContactPage() {
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-16 sm:px-8 lg:grid-cols-2">
         <div className="space-y-8">
           <div>
-            <h2 className="font-display text-2xl font-medium">{t.contact.address}</h2>
+            <h2 className="font-display text-2xl font-semibold">{t.contact.address}</h2>
             <p className="mt-3 text-muted">
               {clinic.street}
               <br />
@@ -37,9 +37,19 @@ function ContactPage() {
                 {clinic.email}
               </a>
             </p>
+            <p className="mt-1">
+              <a
+                className="font-medium text-primary hover:underline"
+                href={clinic.whatsappHref}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {clinic.whatsapp}
+              </a>
+            </p>
           </div>
           <div>
-            <h2 className="font-display text-2xl font-medium">{t.contact.hoursTitle}</h2>
+            <h2 className="font-display text-2xl font-semibold">{t.contact.hoursTitle}</h2>
             <ul className="mt-3 space-y-2 text-sm">
               {t.contact.hours.map((row) => (
                 <li key={row.day} className="flex max-w-sm justify-between gap-4">

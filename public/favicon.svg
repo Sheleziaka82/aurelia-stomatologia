@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Aurelia">
-  <rect width="32" height="32" rx="7" fill="#2A4A40"/>
-  <path fill="#F3EFE8" fill-rule="evenodd" d="M16 5.4 25.6 22.4h-3.95l-1.88-4.28H12.23L10.35 22.4H6.4L16 5.4Zm0 5.05-2.42 5.5h4.84L16 10.45Z"/>
-  <path d="M8.8 25.15c2.35 2.35 5.15 3.5 7.2 3.5s4.85-1.15 7.2-3.5" fill="none" stroke="#F3EFE8" stroke-width="1.85" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="MiDental">
+  <rect width="32" height="32" rx="7" fill="#1A7A3A"/>
+  <path fill="#F4F8F2" d="M16 3.5 22 11.2c.7 1.2.9 2.8.55 5.8-.4 3.1-1 5.7-2.15 7.6-1.15 1.85-2.7 2.2-4.05.85.05-1.1.1-2.05.1-2.75 0 .7-.08 1.65-.2 2.75-1.35 1.35-2.9 1-4.05-.85-1.15-1.9-1.75-4.5-2.15-7.6C9.1 14 9.3 12.4 10 11.2Z"/>
+  <path fill="#7CB342" d="M18.35 14.4c5.55-2.35 10.2 1.25 9.25 6-.8 4-5.45 6.4-9 4.05-2.9-1.95-3.45-7.05-.25-10.05z"/>
 </svg>

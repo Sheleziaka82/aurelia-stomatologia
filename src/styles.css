@@ -3,19 +3,20 @@
 
 @theme {
   --font-sans: "Figtree", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
 
-  --color-bg: #f3efe8;
-  --color-bg-warm: #ebe4d8;
-  --color-surface: #fcfaf6;
-  --color-fg: #1c1e1b;
-  --color-muted: #5e635c;
-  --color-subtle: #8a8f86;
-  --color-primary: #2a4a40;
-  --color-primary-fg: #f6f3ed;
-  --color-primary-hover: #234037;
-  --color-border: #ddd6ca;
-  --color-ring: #2a4a40;
+  --color-bg: #f3f7f0;
+  --color-bg-warm: #e5efdf;
+  --color-surface: #ffffff;
+  --color-fg: #16301f;
+  --color-muted: #4d6354;
+  --color-subtle: #7a8c80;
+  --color-primary: #016b3a;
+  --color-primary-fg: #f4fbf6;
+  --color-primary-hover: #015830;
+  --color-leaf: #7bb841;
+  --color-border: #d4e2d0;
+  --color-ring: #016b3a;
   --color-danger: #8f3d33;
 
   --radius-sm: 0.375rem;
@@ -26,15 +27,15 @@
 
   --aspect-photo: 16 / 10;
   --aspect-room: 4 / 3;
-  --aspect-portrait: 2 / 3;
+  --aspect-portrait: 4 / 5;
 
   --shadow-border:
-    0px 0px 0px 1px rgba(28, 30, 27, 0.06),
-    0px 1px 2px -1px rgba(28, 30, 27, 0.06),
-    0px 2px 4px 0px rgba(28, 30, 27, 0.04);
+    0px 0px 0px 1px rgba(22, 48, 31, 0.06),
+    0px 1px 2px -1px rgba(22, 48, 31, 0.06),
+    0px 2px 4px 0px rgba(22, 48, 31, 0.04);
   --shadow-border-hover:
-    0px 0px 0px 1px rgba(28, 30, 27, 0.1),
-    0px 8px 24px -12px rgba(28, 30, 27, 0.16);
+    0px 0px 0px 1px rgba(22, 48, 31, 0.1),
+    0px 8px 24px -12px rgba(22, 48, 31, 0.16);
 
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -58,7 +59,7 @@
   h3,
   h4 {
     font-family: var(--font-display);
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: -0.03em;
     line-height: 1.15;
     text-wrap: balance;
@@ -74,7 +75,7 @@
   }
 
   img.clinic-photo {
-    outline: 1px solid rgba(28, 30, 27, 0.1);
+    outline: 1px solid rgba(22, 48, 31, 0.08);
     outline-offset: -1px;
   }
 }
@@ -130,10 +131,10 @@
 }
 
 .tracking-label {
-  letter-spacing: 0.22em;
+  letter-spacing: 0.18em;
 }
 
-.aurelia-toast {
+.clinic-toast {
   background: var(--color-surface) !important;
   color: var(--color-fg) !important;
   border: 1px solid var(--color-border) !important;

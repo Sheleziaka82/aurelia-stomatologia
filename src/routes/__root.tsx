@@ -10,7 +10,7 @@ import { PreviewHostBridge } from "@/components/preview-host-bridge";
 import { hydrateLang, useLang } from "@/lib/clinic/store";
 import appCss from "../styles.css?url";
 
-const APP_NAME = "Aurelia Stomatologia";
+const APP_NAME = "MiDental";
 
 export const Route = createRootRoute({
   head: () => ({
@@ -18,11 +18,11 @@ export const Route = createRootRoute({
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: APP_NAME },
-      { name: "theme-color", content: "#2A4A40" },
+      { name: "theme-color", content: "#016B3A" },
       {
         name: "description",
         content:
-          "Prywatna klinika stomatologiczna na Mokotowskiej w Warszawie. Estetyka, implanty, ortodoncja.",
+          "Prywatny gabinet stomatologiczny MiDental w Starej Iwicznej. Tukanów 12. Pierwszy przegląd w roku bezpłatny.",
       },
     ],
     links: [
@@ -31,7 +31,7 @@ export const Route = createRootRoute({
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;1,400&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;1,400&family=Outfit:wght@500;600;700&display=swap",
       },
       { rel: "stylesheet", href: appCss },
       { rel: "manifest", href: "/__grok/manifest.webmanifest" },
