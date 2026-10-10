@@ -18,7 +18,12 @@ function TeamPage() {
   const t = useCopy();
   return (
     <SiteShell>
-      <PageHero eyebrow={t.team.eyebrow} title={t.team.title} lead={t.team.lead} />
+      <PageHero
+        eyebrow={t.team.eyebrow}
+        title={t.team.title}
+        lead={t.team.lead}
+        image="/images/room.jpg"
+      />
       <div className="mx-auto max-w-6xl space-y-20 px-5 py-16 sm:px-8">
         {doctors.map((doc) => {
           const person = t.team.people[doc.id];

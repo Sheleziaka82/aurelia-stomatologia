@@ -1,5 +1,7 @@
 import type { ReactNode } from "react";
+import { MessageCircle } from "lucide-react";
 import { Toaster } from "sonner";
+import { clinic } from "@/lib/clinic/data";
 import { useCopy } from "@/lib/clinic/store";
 import { SiteFooter } from "./site-footer";
 import { SiteHeader } from "./site-header";
@@ -19,6 +21,15 @@ export function SiteShell({ children }: { children: ReactNode }) {
         {children}
       </main>
       <SiteFooter />
+      <a
+        href={clinic.whatsappHref}
+        target="_blank"
+        rel="noreferrer"
+        className="fixed bottom-5 left-5 z-30 inline-flex min-h-11 items-center gap-2 rounded-full bg-primary px-4 text-sm font-medium text-primary-fg shadow-[var(--shadow-border-hover)]"
+      >
+        <MessageCircle className="size-4" />
+        {clinic.whatsapp}
+      </a>
       <Toaster
         position="bottom-right"
         toastOptions={{

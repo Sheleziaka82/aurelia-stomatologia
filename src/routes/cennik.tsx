@@ -16,20 +16,26 @@ function PricesPage() {
   const t = useCopy();
   return (
     <SiteShell>
-      <PageHero eyebrow={t.prices.eyebrow} title={t.prices.title} lead={t.prices.lead} />
-      <div className="mx-auto max-w-6xl space-y-10 px-5 py-16 sm:px-8">
+      <PageHero
+        eyebrow={t.prices.eyebrow}
+        title={t.prices.title}
+        lead={t.prices.lead}
+        image="/images/smile.jpg"
+      />
+      <div className="mx-auto max-w-6xl space-y-8 px-5 py-16 sm:px-8">
         {t.prices.groups.map((group) => (
           <section
             key={group.name}
             className="overflow-hidden rounded-xl bg-surface shadow-[var(--shadow-border)]"
           >
-            <h2 className="border-b border-border px-6 py-4 font-display text-2xl font-medium">
+            <h2 className="flex items-center gap-3 border-b border-border px-6 py-5 font-display text-2xl font-medium">
+              <span className="h-6 w-1 rounded-full bg-leaf" aria-hidden />
               {group.name}
             </h2>
             <table className="w-full text-sm">
               <tbody>
                 {group.rows.map((row) => (
-                  <tr key={row.item} className="border-b border-border last:border-0">
+                  <tr key={row.item} className="border-b border-border last:border-0 hover:bg-bg">
                     <td className="px-6 py-3.5 text-fg">{row.item}</td>
                     <td className="px-6 py-3.5 text-right font-medium tabular-nums text-primary">
                       {row.price}

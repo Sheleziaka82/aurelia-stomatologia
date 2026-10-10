@@ -45,8 +45,8 @@ export function SiteHeader() {
                 key={item.to}
                 to={item.to}
                 className={cn(
-                  "rounded-md px-3 py-2 text-sm font-medium transition-colors duration-150",
-                  active ? "text-primary" : "text-muted hover:text-fg",
+                  "rounded-full px-3 py-2 text-sm font-medium transition-colors duration-150",
+                  active ? "bg-bg-warm text-primary" : "text-muted hover:text-fg",
                 )}
               >
                 {t.nav[item.key]}

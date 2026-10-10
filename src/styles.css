@@ -3,7 +3,7 @@
 
 @theme {
   --font-sans: "Figtree", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
 
   --color-bg: #f3f7f0;
   --color-bg-warm: #e5efdf;
@@ -59,7 +59,7 @@
   h3,
   h4 {
     font-family: var(--font-display);
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: -0.03em;
     line-height: 1.15;
     text-wrap: balance;

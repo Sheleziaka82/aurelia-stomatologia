@@ -3,6 +3,7 @@ import {
   HomeAbout,
   HomeFaq,
   HomeHero,
+  HomePrevent,
   HomeReviews,
   HomeServices,
   HomeStats,
@@ -64,6 +65,7 @@ function Home() {
       <HomeHero />
       <HomeStats />
       <HomeAbout />
+      <HomePrevent />
       <HomeServices />
       <HomeTeam />
       <HomeReviews />

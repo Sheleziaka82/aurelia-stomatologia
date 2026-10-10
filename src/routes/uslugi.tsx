@@ -29,7 +29,12 @@ function ServicesPage() {
 
   return (
     <SiteShell>
-      <PageHero eyebrow={t.services.eyebrow} title={t.services.title} lead={t.services.lead} />
+      <PageHero
+        eyebrow={t.services.eyebrow}
+        title={t.services.title}
+        lead={t.services.lead}
+        image="/images/room.jpg"
+      />
       <div className="mx-auto max-w-6xl space-y-16 px-5 py-16 sm:px-8">
         {serviceIds.map((id, i) => {
           const item = t.services.items[id];

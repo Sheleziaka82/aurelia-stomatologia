@@ -17,7 +17,12 @@ function ContactPage() {
   const t = useCopy();
   return (
     <SiteShell>
-      <PageHero eyebrow={t.contact.eyebrow} title={t.contact.title} lead={t.contact.lead} />
+      <PageHero
+        eyebrow={t.contact.eyebrow}
+        title={t.contact.title}
+        lead={t.contact.lead}
+        image="/images/hero.jpg"
+      />
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-16 sm:px-8 lg:grid-cols-2">
         <div className="space-y-8">
           <div>
