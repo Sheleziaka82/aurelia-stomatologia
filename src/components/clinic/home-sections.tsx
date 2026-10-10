@@ -14,9 +14,9 @@ import { Eyebrow, PhotoFrame, Section } from "./section";
 export function HomeHero() {
   const t = useCopy();
   return (
-    <section className="overflow-hidden px-5 py-8 sm:px-8 sm:py-12">
-      <div className="mx-auto grid max-w-6xl items-center lg:grid-cols-12">
-        <div className="stagger-in relative z-10 rounded-2xl bg-surface p-7 shadow-[var(--shadow-border)] sm:p-10 lg:col-span-5 lg:-mr-16">
+    <section className="px-5 py-10 sm:px-8 sm:py-16">
+      <div className="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-2 lg:gap-14">
+        <div className="stagger-in">
           <p className="text-xs font-semibold uppercase tracking-label text-leaf">
             {t.hero.eyebrow}
           </p>
@@ -42,13 +42,11 @@ export function HomeHero() {
           </div>
           <p className="mt-6 text-sm text-subtle">{t.hero.hours}</p>
         </div>
-        <div className="mt-6 lg:col-span-8 lg:col-start-5 lg:mt-0">
-          <PhotoFrame
-            src="/images/hero.jpg"
-            alt="MiDental Stomatologia, Tukanów 12"
-            imgClassName="aspect-photo min-h-72"
-          />
-        </div>
+        <PhotoFrame
+          src="/images/hero.jpg"
+          alt="MiDental Stomatologia, Tukanów 12"
+          imgClassName="aspect-photo min-h-72"
+        />
       </div>
     </section>
   );
